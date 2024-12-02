@@ -309,25 +309,6 @@
 			status = "disabled";
 		};
 
-	spi1_pins: spi1-pins {
-		mux {
-			function = "spi";
-			groups = "spi1";
-		};
-
-		conf-pu {
-			pins = "SPI1_CS";
-			drive-strength = <MTK_DRIVE_8mA>;
-			bias-pull-up = <MTK_PUPD_SET_R1R0_11>;
-		};
-
-		conf-pd {
-			pins = "SPI1_CLK", "SPI1_MOSI", "SPI1_MISO";
-			drive-strength = <MTK_DRIVE_8mA>;
-			bias-pull-down = <MTK_PUPD_SET_R1R0_11>;
-		};
-	};
-
 		spi1: spi@1100b000 {
 			compatible = "mediatek,mt7986-spi-ipm", "mediatek,spi-ipm";
 			reg = <0 0x1100b000 0 0x100>;
@@ -339,8 +320,6 @@
 			clock-names = "parent-clk", "sel-clk", "spi-clk", "hclk";
 			#address-cells = <1>;
 			#size-cells = <0>;
-			pinctrl-names = "default";
-			pinctrl-0 = <&spi1_pins>;
 			status = "disabled";
 		};
 
