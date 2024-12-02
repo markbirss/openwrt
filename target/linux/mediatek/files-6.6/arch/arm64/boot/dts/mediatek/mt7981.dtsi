@@ -320,6 +320,8 @@
 			clock-names = "parent-clk", "sel-clk", "spi-clk", "hclk";
 			#address-cells = <1>;
 			#size-cells = <0>;
+			pinctrl-names = "default";
+			pinctrl-0 = <&spi1_pins>;
 			status = "disabled";
 		};
 
