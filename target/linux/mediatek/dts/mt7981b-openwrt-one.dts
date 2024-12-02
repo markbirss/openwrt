@@ -353,8 +353,6 @@
                 #address-cells = <1>;
                 #size-cells = <0>;
                 spi-max-frequency = <52000000>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&spi1_pins>;
                 status = "okay";
         };
 };
