@@ -210,10 +210,10 @@
 		};
 	};
 
-	spi1_pins: spi1-pins {
+	spi1_flash_pins: spi1-pins {
 		mux {
 			function = "spi";
-			groups = "spi1";
+			groups = "spi1_1";
 		};
 
 		conf-pu {
@@ -344,7 +344,7 @@
 
 &spi1 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&spi1_pins>;
+	pinctrl-0 = <&spi1_flash_pins>;
 	status = "okay";
 
         spidev@0 {   
